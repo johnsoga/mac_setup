@@ -1,0 +1,30 @@
+---
+- name: Install Applications
+  hosts: osx
+
+  vars:
+      gui_apps:
+          - google-chrome
+          - wireshark
+          - vlc
+          - the-unarchiver
+          - microsoft-office
+          - firefox
+          - virtualbox
+          - little-snitch
+          - iterm2
+          - ableton-live-suite
+          - homebrew/cask-drivers/ubiquiti-unifi-controller
+
+
+  tasks:
+      - name: Ensure Homebrew/Cask is up-to-date
+        homebrew:
+            state: latest
+            update_homebrew: yes
+
+      - name: start installing homebrew cask applications
+        homebrew_cask:
+            name: "{{ item }}"
+            state: present
+        with_items: "{{ gui_apps }}"
