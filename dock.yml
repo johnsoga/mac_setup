@@ -1,0 +1,58 @@
+---
+- name: Configure the Dock
+  hosts: osx
+
+  tasks:
+    - name: Menu bar items
+      command: 'defaults write com.apple.systemuiserver menuExtras -array
+      "/System/Library/CoreServices/Menu Extras/Clock.menu"
+      "/System/Library/CoreServices/Menu Extras/Battery.menu"
+      "/System/Library/CoreServices/Menu Extras/Volume.menu"
+      "/System/Library/CoreServices/Menu Extras/AirPort.menu"
+      "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+      "/System/Library/CoreServices/Menu Extras/Displays.menu"'
+
+    - name: Menu bar items
+      command: killall SystemUIServer
+
+    - name: Enable - Automatically hide and show the Dock
+      command: defaults write com.apple.dock autohide -bool true
+
+    - name: Disable - Animation when hiding/showing the Dock
+      command: defaults write com.apple.dock autohide-time-modifier -float 0.5
+
+    - name: Disable - Animate opening applications from the Dock
+      command: defaults write com.apple.dock launchanim -bool false
+
+    - name: Disable - Show recent applications in Dock
+      command: defaults write com.apple.dock show-recents -bool false
+
+    - name: Change - minimize/maximize window effect
+      command: defaults write com.apple.dock mineffect -string "scale"
+
+    - name: Show Path bar in Finder window
+      command: defaults write com.apple.finder ShowPathbar -bool TRUE
+
+    - name: Clear the dock
+      command: dockutil --remove all --no-restart
+
+    - name: Add Launch Pad
+      command: dockutil --add /Applications/'Launchpad'.app --no-restart
+
+    - name: Add iTunes
+      command: dockutil --add /Applications/iTunes.app --no-restart
+
+    - name: Add Atom
+      command: dockutil --add /Applications/Atom.app --no-restart
+
+    - name: Add Google Chrome
+      command: dockutil --add /Applications/'Google Chrome'.app --no-restart
+
+    # - name: Add LimeChat
+    #   command: dockutil --add /Applications/'LimeChat'.app
+
+    - name: Add iTerm
+      command: dockutil --add /Applications/'iTerm'.app
+
+    - name: Add Firefox
+      command: dockutil --add /Applications/'Firefox'.app
