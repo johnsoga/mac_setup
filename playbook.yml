@@ -5,17 +5,30 @@
   vars:
       gui_apps:
           - google-chrome
-          - wireshark
           - vlc
           - the-unarchiver
           - microsoft-office
           - firefox
           - virtualbox
+          - virtualbox-extension-pack
           - little-snitch
           - iterm2
           - ableton-live-suite
-          - homebrew/cask-drivers/ubiquiti-unifi-controller
+          - atom
+          - musicbrainz-picard
+          - vmware-fusion
+          - sourcetree
+          - focusrite-control
+          # - wireshark
+          # - slack
+          # - openconnect-gui
 
+      cli_apps:
+          - dockutil
+          - mas
+          - iperf3
+          - uncrustify
+          - tmux
 
   tasks:
       - name: Ensure Homebrew/Cask is up-to-date
@@ -23,8 +36,18 @@
             state: latest
             update_homebrew: yes
 
+      - name: start installing homebrew applications
+        homebrew:
+            name: "{{ cli_apps }}"
+            state: present
+
       - name: start installing homebrew cask applications
         homebrew_cask:
             name: "{{ item }}"
             state: present
         with_items: "{{ gui_apps }}"
+      - name: Brew Cleanup
+        command: brew cleanup -vs
+
+
+- import_playbook: dock.yml
