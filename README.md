@@ -1,6 +1,6 @@
 # MacOS
 
-### Homebrew Installed Apps:
+### Homebrew(Cask) GUI Apps:
 - [VLC](https://www.videolan.org/vlc/index.html)
 - [The Unarchiver](https://theunarchiver.com/)
 - [Microsoft Office](https://products.office.com/en-us/mac/microsoft-office-for-mac)
@@ -13,7 +13,11 @@
 - [Atom](https://atom.io/)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
 - [VMware Fusion](https://www.vmware.com/products/fusion.html)
-- [Sourcetree](https://www.sourcetreeapp.com/)
+- [Fork](https://git-fork.com/)
+- [Focusrite Control](https://focusrite.com/en/focusrite-control)
+- [Etcher](https://www.balena.io/etcher/)
+- [Tripmode](https://www.tripmode.ch/)
+- [Wireshark](https://www.wireshark.org/)
 
 ### AppStore Installed Apps:
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)

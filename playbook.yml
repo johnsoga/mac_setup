@@ -22,7 +22,6 @@
           # - cyberduck
           - tripmode
           - wireshark
-          - fork
           # - slack
           # - openconnect-gui
           # - db-browser-for-sqlite
