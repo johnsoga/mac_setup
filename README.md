@@ -1,7 +1,6 @@
 # MacOS
 
 ### Homebrew Installed Apps:
-- [Google Chrome](https://www.google.com/chrome)
 - [VLC](https://www.videolan.org/vlc/index.html)
 - [The Unarchiver](https://theunarchiver.com/)
 - [Microsoft Office](https://products.office.com/en-us/mac/microsoft-office-for-mac)
