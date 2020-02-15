@@ -6,7 +6,7 @@
       gui_apps:
           - google-chrome
           - vlc
-          - the-unarchiver
+          # - the-unarchiver
           - microsoft-office
           - firefox
           - virtualbox
@@ -17,11 +17,16 @@
           - atom
           - musicbrainz-picard
           - vmware-fusion
-          - sourcetree
+          - fork
           - focusrite-control
-          # - wireshark
+          - balenaetcher
+          # - cyberduck
+          - tripmode
+          - wireshark
+          - fork
           # - slack
           # - openconnect-gui
+          # - db-browser-for-sqlite
 
       cli_apps:
           - dockutil
@@ -29,12 +34,14 @@
           - iperf3
           - uncrustify
           - tmux
+          - gpg
+
 
   tasks:
-      - name: Ensure Homebrew/Cask is up-to-date
+      - name: Ensure Homebrew is up-to-date
         homebrew:
-            state: latest
             update_homebrew: yes
+            upgrade_all: yes
 
       - name: start installing homebrew applications
         homebrew:
@@ -46,6 +53,7 @@
             name: "{{ item }}"
             state: present
         with_items: "{{ gui_apps }}"
+
       - name: Brew Cleanup
         command: brew cleanup -vs
 
