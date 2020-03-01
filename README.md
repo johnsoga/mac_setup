@@ -23,4 +23,35 @@
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Brother iPrint&Scan](https://apps.apple.com/us/app/brother-iprint-scan/id1193539993)
 
-## Trackpad Options:
+***
+## SSH Setup
+#### SSH Key Generation:
+Be Kind, [Rewind](https://www.ssh.com/ssh/keygen)!
+
+```
+$ ssh-keygen -t ed25519
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/path/to/.ssh/id_ed25519): meaningful_name
+Enter passphrase (empty for no passphrase): meaninful_passphrase
+Enter same passphrase again: meaninful_passphrase
+Your identification has been saved in meaningful_name.
+Your public key has been saved in meaningful_name.pub.
+```
+
+#### Setup SSH config
+Append the following to your `/path/to/.ssh/confg` file
+```
+Host host.to.use.ssh.key.to.remote.to
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/meaningful_name
+```
+
+#### Add Key/Passcode to Keychain
+```
+$ ssh-add -K ~/.ssh/meaningful_name
+Enter passphrase for meaningful_name:
+Identity added: meaningful_name (user@machine_name)
+```
+
+### Trackpad Options:
