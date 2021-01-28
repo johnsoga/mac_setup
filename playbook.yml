@@ -8,15 +8,15 @@
           # - the-unarchiver
           - microsoft-office
           - firefox
-          - virtualbox
-          - virtualbox-extension-pack
+          # - virtualbox
+          # - virtualbox-extension-pack
           - little-snitch
           - iterm2
           - ableton-live-suite
           - atom
           - musicbrainz-picard
-          - vmware-fusion
-          - fork
+          # - vmware-fusion
+          # - fork
           - focusrite-control
           - balenaetcher
           # - cyberduck
@@ -25,6 +25,8 @@
           # - slack
           # - openconnect-gui
           # - db-browser-for-sqlite
+          - openvpn-connect
+          - gitahead
 
       cli_apps:
           - dockutil
@@ -39,7 +41,7 @@
       - name: Ensure Homebrew is up-to-date
         homebrew:
             update_homebrew: yes
-            upgrade_all: yes
+            # upgrade_all: yes
 
       - name: start installing homebrew applications
         homebrew:
