@@ -24,6 +24,33 @@
 - [Brother iPrint&Scan](https://apps.apple.com/us/app/brother-iprint-scan/id1193539993)
 
 ***
+## Prerequisite
+Install Xcode or Xcode Tools: this is a prereq. of Homebrew
+
+```
+$ xcode-select --install
+```
+Install [Homebrew](https://docs.brew.sh/Installation)
+
+Install [Ansible](https://www.ansible.com/)
+```
+$ brew install ansible
+```
+
+Create the directory you will story repositories in and go to it
+```
+$ mkdir ~/Documents/VersionControl
+$ cd ~/Documents/VersionControl
+```
+
+Clone the repo
+```
+$ git clone https://github.com/johnsoga/mac_setup.git
+$ cd mac_setup
+```
+
+Little Snitch via Homebrew only contains the binary for Big Sur for older version check [here](https://www.obdev.at/products/littlesnitch/download-previous-versions.html). **Recommended** to install Little Snitch and apply rules before continuing
+
 ## SSH Setup
 #### SSH Key Generation:
 Be Kind, [Rewind](https://www.ssh.com/ssh/keygen)!
@@ -32,8 +59,8 @@ Be Kind, [Rewind](https://www.ssh.com/ssh/keygen)!
 $ ssh-keygen -t ed25519
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/path/to/.ssh/id_ed25519): meaningful_name
-Enter passphrase (empty for no passphrase): meaninful_passphrase
-Enter same passphrase again: meaninful_passphrase
+Enter passphrase (empty for no passphrase): meaningful_passphrase
+Enter same passphrase again: meaningful_passphrase
 Your identification has been saved in meaningful_name.
 Your public key has been saved in meaningful_name.pub.
 ```
