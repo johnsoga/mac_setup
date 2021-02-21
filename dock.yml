@@ -3,18 +3,6 @@
   hosts: osx
 
   tasks:
-    - name: Menu bar items
-      command: 'defaults write com.apple.systemuiserver menuExtras -array
-      "/System/Library/CoreServices/Menu Extras/Clock.menu"
-      "/System/Library/CoreServices/Menu Extras/Battery.menu"
-      "/System/Library/CoreServices/Menu Extras/Volume.menu"
-      "/System/Library/CoreServices/Menu Extras/AirPort.menu"
-      "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
-      "/System/Library/CoreServices/Menu Extras/Displays.menu"'
-
-    - name: Menu bar items
-      command: killall SystemUIServer
-
     - name: Enable - Automatically hide and show the Dock
       command: defaults write com.apple.dock autohide -bool true
 
@@ -30,29 +18,23 @@
     - name: Change - minimize/maximize window effect
       command: defaults write com.apple.dock mineffect -string "scale"
 
-    - name: Show Path bar in Finder window
-      command: defaults write com.apple.finder ShowPathbar -bool TRUE
-
     - name: Clear the dock
-      command: dockutil --remove all --no-restart
+      command: dockutil --remove all
 
-    - name: Add Launch Pad
-      command: dockutil --add /Applications/'Launchpad'.app --no-restart
+    - name: Add Launchpad
+      command: dockutil --add /System/Applications/Launchpad.app
 
-    - name: Add iTunes
-      command: dockutil --add /Applications/iTunes.app --no-restart
+    - name: Add Apple Music
+      command: dockutil --add /System/Applications/Music.app
+
+    - name: Add Messages
+      command: dockutil --add /System/Applications/Messages.app
 
     - name: Add Atom
-      command: dockutil --add /Applications/Atom.app --no-restart
-
-    - name: Add Google Chrome
-      command: dockutil --add /Applications/'Google Chrome'.app --no-restart
-
-    # - name: Add LimeChat
-    #   command: dockutil --add /Applications/'LimeChat'.app
-
-    - name: Add iTerm
-      command: dockutil --add /Applications/'iTerm'.app
+      command: dockutil --add /Applications/Atom.app
 
     - name: Add Firefox
-      command: dockutil --add /Applications/'Firefox'.app
+      command: dockutil --add /Applications/Firefox.app
+
+    - name: Add iTerm
+      command: dockutil --add /Applications/iTerm.app
