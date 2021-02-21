@@ -4,58 +4,52 @@
 
   vars:
       gui_apps:
-          - vlc
+          # - vlc
           # - the-unarchiver
-          - microsoft-office
+          # - microsoft-office
           - firefox
+          - google-chrome
           # - virtualbox
           # - virtualbox-extension-pack
-          - little-snitch
+          # - little-snitch
           - iterm2
-          - ableton-live-suite
+          # - ableton-live-suite
           - atom
-          - musicbrainz-picard
+          # - musicbrainz-picard
           # - vmware-fusion
           # - fork
-          - focusrite-control
+          # - focusrite-control
           - balenaetcher
           # - cyberduck
-          - tripmode
+          # - tripmode
           - wireshark
-          # - slack
-          # - openconnect-gui
+          - slack
           # - db-browser-for-sqlite
           - openvpn-connect
+          - tunnelblick
           - gitahead
 
       cli_apps:
           - dockutil
-          - mas
+          # - mas
           - iperf3
-          - uncrustify
-          - tmux
-          - gpg
+          # - uncrustify
+          # - tmux
+          # - gpg
 
 
   tasks:
       - name: Ensure Homebrew is up-to-date
         homebrew:
             update_homebrew: yes
-            # upgrade_all: yes
 
-      - name: start installing homebrew applications
+      - name: Install Homebrew(CLI) Applications
         homebrew:
             name: "{{ cli_apps }}"
             state: present
 
-      - name: start installing homebrew cask applications
+      - name: Install Homebrew(GUI) Cask Applications
         homebrew_cask:
             name: "{{ item }}"
             state: present
         with_items: "{{ gui_apps }}"
-
-      - name: Brew Cleanup
-        command: brew cleanup -vs
-
-
-- import_playbook: dock.yml
