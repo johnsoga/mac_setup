@@ -16,7 +16,7 @@
 - [The Unarchiver](https://theunarchiver.com/)
 - [Microsoft Office](https://products.office.com/en-us/mac/microsoft-office-for-mac)
 - [Virtualbox](https://www.virtualbox.org/)
-- Virtualbox Extension Pack
+- [Virtualbox Extension Pack](https://www.virtualbox.org/)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
 - [VMware Fusion](https://www.vmware.com/products/fusion.html)
 - [Fork](https://git-fork.com/)
