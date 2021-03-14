@@ -1,29 +1,34 @@
 # MacOS
 
 ### Homebrew(Cask) GUI Apps:
+- [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html)
+- [Ableton Live](https://www.ableton.com/en/)
+- [Firefox](https://www.mozilla.org/en-US/firefox/)
+- [Google Chrome](https://www.google.com/chrome/)
+- [iTerm2](https://www.iterm2.com/)
+- [Atom](https://atom.io/)
+- [Etcher](https://www.balena.io/etcher/)
+- [Wireshark](https://www.wireshark.org/)
+- [OpenVPN Connect](https://openvpn.net/client-connect-vpn-for-mac-os/)
+- [Tunnelblick](https://tunnelblick.net/)
+- [GitAhead](https://gitahead.github.io/gitahead.com/)
 - [VLC](https://www.videolan.org/vlc/index.html)
 - [The Unarchiver](https://theunarchiver.com/)
 - [Microsoft Office](https://products.office.com/en-us/mac/microsoft-office-for-mac)
-- [Firefox](https://www.mozilla.org/en-US/firefox/)
 - [Virtualbox](https://www.virtualbox.org/)
 - Virtualbox Extension Pack
-- [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html)
-- [iTerm2](https://www.iterm2.com/)
-- [Ableton Live](https://www.ableton.com/en/)
-- [Atom](https://atom.io/)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
 - [VMware Fusion](https://www.vmware.com/products/fusion.html)
 - [Fork](https://git-fork.com/)
 - [Focusrite Control](https://focusrite.com/en/focusrite-control)
-- [Etcher](https://www.balena.io/etcher/)
 - [Tripmode](https://www.tripmode.ch/)
-- [Wireshark](https://www.wireshark.org/)
+- [Cyberduck](https://cyberduck.io/)
 
 ### AppStore Installed Apps:
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
-- [Brother iPrint&Scan](https://apps.apple.com/us/app/brother-iprint-scan/id1193539993)
 
 ***
+
 ## Prerequisite
 Install Xcode or Xcode Tools: this is a prereq. of Homebrew
 
@@ -37,7 +42,7 @@ Install [Ansible](https://www.ansible.com/)
 $ brew install ansible
 ```
 
-Create the directory you will story repositories in and go to it
+Create the directory you will store your repositories in and go to it
 ```
 $ mkdir ~/Documents/VersionControl
 $ cd ~/Documents/VersionControl
@@ -49,7 +54,11 @@ $ git clone https://github.com/johnsoga/mac_setup.git
 $ cd mac_setup
 ```
 
-Little Snitch via Homebrew only contains the binary for Big Sur for older version check [here](https://www.obdev.at/products/littlesnitch/download-previous-versions.html). **Recommended** to install Little Snitch and apply rules before continuing
+_Note: MacOS Catalina & Earlier_
+
+Installing Little Snitch via Homebrew only works for MacOS Big Sur & Newer. For older version check [here](https://www.obdev.at/products/littlesnitch/download-previous-versions.html).
+
+**Recommended** to install Little Snitch and apply rules before installing other software
 
 ## SSH Setup
 #### SSH Key Generation:
@@ -80,5 +89,3 @@ $ ssh-add -K ~/.ssh/meaningful_name
 Enter passphrase for meaningful_name:
 Identity added: meaningful_name (user@machine_name)
 ```
-
-### Trackpad Options:
