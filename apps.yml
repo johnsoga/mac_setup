@@ -4,13 +4,13 @@
 
   vars:
       gui_apps:
-          # - vlc
+          - vlc
           # - the-unarchiver
-          # - microsoft-office
+          - microsoft-office
           - firefox
           - google-chrome
-          # - virtualbox
-          # - virtualbox-extension-pack
+          - virtualbox
+          - virtualbox-extension-pack
           # - little-snitch
           - iterm2
           # - ableton-live-suite
@@ -20,7 +20,7 @@
           # - fork
           # - focusrite-control
           - balenaetcher
-          # - cyberduck
+          - cyberduck
           # - tripmode
           - wireshark
           - slack
@@ -48,7 +48,7 @@
             name: "{{ cli_apps }}"
             state: present
 
-      - name: Install Homebrew(GUI) Cask Applications
+      - name: Install Cask(GUI) Applications
         homebrew_cask:
             name: "{{ item }}"
             state: present
