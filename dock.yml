@@ -30,9 +30,6 @@
     - name: Add Messages
       command: dockutil --add /System/Applications/Messages.app
 
-    - name: Add Atom
-      command: dockutil --add /Applications/Atom.app
-
     - name: Add Firefox
       command: dockutil --add /Applications/Firefox.app
 

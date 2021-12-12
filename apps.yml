@@ -4,39 +4,20 @@
 
   vars:
       gui_apps:
-          - vlc
-          # - the-unarchiver
-          - microsoft-office
+          - cyberduck
           - firefox
           - google-chrome
-          - virtualbox
-          - virtualbox-extension-pack
-          # - little-snitch
           - iterm2
-          # - ableton-live-suite
-          - atom
-          # - musicbrainz-picard
-          # - vmware-fusion
-          # - fork
-          # - focusrite-control
-          - balenaetcher
-          - cyberduck
-          # - tripmode
-          - wireshark
+          - little-snitch
+          - microsoft-office
           - slack
-          # - db-browser-for-sqlite
-          - openvpn-connect
-          - tunnelblick
-          - gitahead
+          - visual-studio-code
+          - vlc
+          - wireshark
 
       cli_apps:
           - dockutil
-          # - mas
           - iperf3
-          # - uncrustify
-          # - tmux
-          # - gpg
-
 
   tasks:
       - name: Ensure Homebrew is up-to-date
@@ -48,7 +29,7 @@
             name: "{{ cli_apps }}"
             state: present
 
-      - name: Install Cask(GUI) Applications
+      - name: Install Homebrew Cask(GUI) Applications
         homebrew_cask:
             name: "{{ item }}"
             state: present
