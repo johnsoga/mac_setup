@@ -30,7 +30,7 @@
 ***
 
 ## Prerequisite
-Install Xcode or Xcode Tools: this is a prereq. of Homebrew
+Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) or Xcode Tools (Homebrew Requirement)
 
 ```
 $ xcode-select --install
