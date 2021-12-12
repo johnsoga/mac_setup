@@ -1,28 +1,15 @@
 # MacOS
 
 ### Homebrew(Cask) GUI Apps:
-- [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html)
-- [Ableton Live](https://www.ableton.com/en/)
+- [Cyberduck](https://cyberduck.io/)
 - [Firefox](https://www.mozilla.org/en-US/firefox/)
 - [Google Chrome](https://www.google.com/chrome/)
 - [iTerm2](https://www.iterm2.com/)
-- [Atom](https://atom.io/)
-- [Etcher](https://www.balena.io/etcher/)
-- [Wireshark](https://www.wireshark.org/)
-- [OpenVPN Connect](https://openvpn.net/client-connect-vpn-for-mac-os/)
-- [Tunnelblick](https://tunnelblick.net/)
-- [GitAhead](https://gitahead.github.io/gitahead.com/)
-- [VLC](https://www.videolan.org/vlc/index.html)
-- [The Unarchiver](https://theunarchiver.com/)
+- [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html)
 - [Microsoft Office](https://products.office.com/en-us/mac/microsoft-office-for-mac)
-- [Virtualbox](https://www.virtualbox.org/)
-- [Virtualbox Extension Pack](https://www.virtualbox.org/)
-- [MusicBrainz Picard](https://picard.musicbrainz.org/)
-- [VMware Fusion](https://www.vmware.com/products/fusion.html)
-- [Fork](https://git-fork.com/)
-- [Focusrite Control](https://focusrite.com/en/focusrite-control)
-- [Tripmode](https://www.tripmode.ch/)
-- [Cyberduck](https://cyberduck.io/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [VLC](https://www.videolan.org/vlc/index.html)
+- [Wireshark](https://www.wireshark.org/)
 
 ### AppStore Installed Apps:
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
@@ -37,9 +24,14 @@ $ xcode-select --install
 ```
 Install [Homebrew](https://docs.brew.sh/Installation)
 
+Install [Python3](https://www.python.org/)
+```
+$ brew install python3
+```
+
 Install [Ansible](https://www.ansible.com/)
 ```
-$ brew install ansible
+$ python3 -m pip install --user ansible
 ```
 
 Create the directory you will store your repositories in and go to it
@@ -53,12 +45,6 @@ Clone the repo
 $ git clone https://github.com/johnsoga/mac_setup.git
 $ cd mac_setup
 ```
-
-_Note: MacOS Catalina & Earlier_
-
-Installing Little Snitch via Homebrew only works for MacOS Big Sur & Newer. For older version check [here](https://www.obdev.at/products/littlesnitch/download-previous-versions.html).
-
-**Recommended** to install Little Snitch and apply rules before installing other software
 
 ## SSH Setup
 #### SSH Key Generation:
