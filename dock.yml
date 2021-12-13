@@ -33,5 +33,8 @@
     - name: Add Firefox
       command: dockutil --add /Applications/Firefox.app
 
+    - name: Add Visual Studio Code
+      command: dockutil --add /Applications/Visual\ Studio\ Code.app
+
     - name: Add iTerm
       command: dockutil --add /Applications/iTerm.app
