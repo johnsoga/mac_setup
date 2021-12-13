@@ -34,6 +34,11 @@ Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/int
 $ python3 -m pip install --user ansible
 ```
 
+Update `$PATH` in `.bashrc` as this is where the ansible binaries are installed
+```
+export PATH=$PATH:~/Library/Python/3.9/bin
+```
+
 Create the directory you will store your repositories in and go to it
 ```
 $ mkdir ~/Documents/VersionControl
