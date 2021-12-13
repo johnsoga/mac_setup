@@ -29,7 +29,7 @@ Install [Python3](https://www.python.org/)
 $ brew install python3
 ```
 
-Install [Ansible](https://www.ansible.com/)
+Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 ```
 $ python3 -m pip install --user ansible
 ```
