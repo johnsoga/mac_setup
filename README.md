@@ -31,18 +31,18 @@ $ brew install python3
 
 Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 ```
-$ python3 -m pip install --user ansible
+$ python3.9 -m pip install --user ansible
 ```
 
-Update `$PATH` in `.bashrc` as this is where the ansible binaries are installed
+Update `$PATH` in `.bashrc` as this is where the Ansible binaries are installed
 ```
 export PATH=$PATH:~/Library/Python/3.9/bin
 ```
 
 Create the directory you will store your repositories in and go to it
 ```
-$ mkdir ~/Documents/VersionControl
-$ cd ~/Documents/VersionControl
+$ mkdir ~/Documents/Code
+$ cd ~/Documents/Code
 ```
 
 Clone the repo
