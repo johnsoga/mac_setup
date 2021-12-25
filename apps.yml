@@ -10,10 +10,8 @@
           - iterm2
           - little-snitch
           - microsoft-office
-          - slack
           - visual-studio-code
           - vlc
-          - wireshark
 
       cli_apps:
           - dockutil
