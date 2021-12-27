@@ -17,39 +17,31 @@
 ***
 
 ## Prerequisite
-Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) or Xcode Tools (Homebrew Requirement)
-
-```
-$ xcode-select --install
-```
-Install [Homebrew](https://docs.brew.sh/Installation)
-
-Install [Python3](https://www.python.org/)
-```
-$ brew install python3
-```
-
-Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-```
-$ python3.9 -m pip install --user ansible
-```
-
-Update `$PATH` in `.bashrc` as this is where the Ansible binaries are installed
-```
-export PATH=$PATH:~/Library/Python/3.9/bin
-```
-
-Create the directory you will store your repositories in and go to it
-```
-$ mkdir ~/Documents/Code
-$ cd ~/Documents/Code
-```
-
-Clone the repo
-```
-$ git clone https://github.com/johnsoga/mac_setup.git
-$ cd mac_setup
-```
+1. Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) or Xcode Tools (Homebrew Requirement)
+    ```
+    xcode-select --install
+    ```
+2. Install [Homebrew](https://docs.brew.sh/Installation)
+3. Install [Python3](https://www.python.org/)
+    ```
+    brew install python3
+    ```
+4. Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+    ```
+    python3.9 -m pip install --user ansible
+    ```
+    Update `$PATH` in `.bashrc` as this is where the Ansible binaries are installed
+    
+    ```
+    export PATH=$PATH:~/Library/Python/3.9/bin
+    ```
+5. Create a directory to store repositories in and clone the repo
+    ```
+    mkdir ~/Documents/Code
+    cd ~/Documents/Code
+    git clone https://github.com/johnsoga/mac_setup.git
+    cd mac_setup
+    ```
 
 ## SSH Setup
 #### SSH Key Generation:
