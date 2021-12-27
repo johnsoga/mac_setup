@@ -11,7 +11,7 @@
 - [VLC](https://www.videolan.org/vlc/index.html)
 - [Wireshark](https://www.wireshark.org/)
 
-### AppStore Installed Apps:
+### AppStore Apps:
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 
 ***
