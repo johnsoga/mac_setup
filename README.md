@@ -9,7 +9,7 @@
 - [Microsoft Office](https://products.office.com/en-us/mac/microsoft-office-for-mac)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [VLC](https://www.videolan.org/vlc/index.html)
-- [Wireshark](https://www.wireshark.org/)
+- [Wireshark](https://www.wireshark.org/) - temporarily removed new build required to fix issue requiring Rosetta 2 see [here](https://gitlab.com/wireshark/wireshark/-/issues/17757)
 
 ### CLI APPS:
 - [dockutil](https://github.com/kcrawford/dockutil)
