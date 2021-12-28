@@ -1,6 +1,6 @@
-# MacOS
+# MacOS Setup Guide
 
-### Homebrew(Cask) GUI Apps:
+### GUI Apps:
 - [Cyberduck](https://cyberduck.io/)
 - [Firefox](https://www.mozilla.org/en-US/firefox/)
 - [Google Chrome](https://www.google.com/chrome/)
@@ -10,6 +10,10 @@
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [VLC](https://www.videolan.org/vlc/index.html)
 - [Wireshark](https://www.wireshark.org/)
+
+### CLI APPS:
+- [dockutil](https://github.com/kcrawford/dockutil)
+- [iperf3](https://iperf.fr/iperf-download.php)
 
 ### AppStore Apps:
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
@@ -42,6 +46,27 @@
     git clone https://github.com/johnsoga/mac_setup.git
     cd mac_setup
     ```
+
+## Installation
+#### Installing Applications
+All applications listed above will be installed using the `apps.yml` playbook
+```
+ansible-playbook -i ansible_hosts.txt apps.yml
+```
+#### Configuring the Dock
+Customizations on the docks animations & layout are done using the `dock.yml` playbook
+```
+ansible-playbook -i ansible_hosts.txt dock.yml
+```
+#### System Preferences Configuration
+People use various methods for accomplishing this most notable being using the `defaults` command. A popular example is [here](https://github.com/mathiasbynens/dotfiles/blob/main/.macos). Personally I find for configuring the System Preferences this method is a bit buggy and unreliable so I think this approach using ActionScript is reliable but feel free to use whatever works best for you. Running the ActionScript application will require you to give Accessability access to the script (you'll be prompted twice). 
+```
+cd automator
+unzip SystemPreferencesSetup.zip
+open SystemPreferencesSetup.app
+```
+
+
 
 ## SSH Setup
 #### SSH Key Generation:
